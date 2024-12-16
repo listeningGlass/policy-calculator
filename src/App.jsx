@@ -1,9 +1,10 @@
-import React from 'react';
+<SpeedInsights />
 import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
 import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
 import PolicyCalculator from './components/IULLoanCalculator';
 import PolicyTableInput from './components/PolicyTableInput';
 import AccountSettings from './components/AccountSettings';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function Navigation() {
     const { logout } = useAuth0();
@@ -120,6 +121,7 @@ function App() {
                         </Routes>
                     </main>
                 </div>
+                <SpeedInsights />
             </Router>
         </Auth0Provider>
     );
